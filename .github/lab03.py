@@ -1,3 +1,5 @@
+import random
+
 # dice options created usinglist() and range()
 disceOptions = list(range(1,7))
 
@@ -23,7 +25,7 @@ for j in range(1, 21, 2):
     monsterRoll = random.choice(disceOptions)
 
     heroWeapon = weapons[heroRoll - 1]
-    monsterWeapon = weapons[heroRoll - 1]
+    monsterWeapon = weapons[monsterRoll - 1]
 
     heroTotal = CombatStength + heroRoll
     monsterTotal = mCombatStength + monsterRoll
@@ -32,9 +34,9 @@ for j in range(1, 21, 2):
     print(f"\n Hero selected {heroWeapon}, Monster selected {monsterWeapon}")
     print(f"\n Hero Total Strength {heroTotal}, Monster Total strength {monsterTotal}")
 
-    if heroTotal > monsterTotal
+    if heroTotal > monsterTotal:
         print("Hero Wins!")
-    elif heroTotal < monsterTotal
+    elif heroTotal < monsterTotal:
         print("Monster Wins!")
     else:
         print("Its a tie!")
